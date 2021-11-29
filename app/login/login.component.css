@@ -1,0 +1,72 @@
+
+        
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: #fdf7fd;
+    margin: 150px 150px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.login {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+    margin-bottom: 16px;
+}
+
+#btn {
+      
+    background-color: #00AFEF;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    font-size:13px;
+    font-weight: bold;
+    
+  
+    
+}
+
+
+#btn:hover{
+    background-color:yellow;}
+
+.container {
+    background-color: hsl(0, 25%, 94%);
+    padding: 10px;
+    border: 3px solid rgb(153, 22, 22);
+}
+
+
+
+h1 {
+    
+
+    text-align: center;
+    color: #680b1a;
+    
+    font-weight: bold;
+    
+
+}
+
+
+form {
+    text-align: center;
+
+    margin: 50px;
+
+}
+
+
+
+
+
+
+
+    

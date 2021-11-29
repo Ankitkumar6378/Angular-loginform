@@ -1,0 +1,36 @@
+
+<html>
+
+    <head>
+        <title>LOGIN PAGE</title>
+    </head>
+   
+    
+    <body>
+        <div class="container"id="console">
+            <form id="form" [formGroup]="loginForm" (ngSubmit)="login()">
+               
+                <h2>LOGIN PAGE</h2>
+    
+                
+    
+                <label>Email : </label>
+                <input type="text" name="email"  placeholder="Enter email address" class="login" formControlName="email" ><br>
+    
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter Password" class="login" formControlName="password"><br>
+    
+                <button id="btn"  value="Submit">Login</button>
+                
+                <p>
+                        Not a member ?
+                        <a routerLink="/registration"> Go and register. </a>
+                </p>
+                
+            </form>
+        </div>
+       
+    
+    </body>
+    
+    </html>
