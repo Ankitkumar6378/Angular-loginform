@@ -1,0 +1,23 @@
+
+          body{
+               margin: 400px 150px; 
+               background:skyblue !important;
+               text-align: center;
+               font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+               
+               
+          }
+        
+          button{
+          
+               background-color: white;
+               border-radius: 10px;
+                width: 100px;
+              height: 30px;
+              font-size:13px;
+              font-weight: bold;
+          }
+          button:hover{
+    background-color:yellow;}
+         
+    
