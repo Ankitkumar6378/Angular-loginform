@@ -16,10 +16,10 @@ export class RegistrationComponent implements OnInit {
   constructor(private formbuilder:FormBuilder, private http:HttpClient,private router:Router) { }
   ngOnInit(): void {
     this.registrationForm=this.formbuilder.group({
-    username:['',[Validators.required,Validators.pattern('^[a-zA-Z]{5,15}$')]],
-    email:['',[Validators.required,Validators.email]],
-    mobile:['',[Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
-    password:['',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')]]
+    username:['',[Validators.required,Validators.pattern('^[a-zA-Z0-9](_(?!(\.|_))|\.(?!(_|\.))|[a-zA-Z0-9]){6,18}[a-zA-Z0-9]$')]],
+    email:['',[Validators.required,Validators.pattern('^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$')]],
+    mobile:['',[Validators.required, Validators.pattern('')]],
+    password:['',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$')]]
     })
   }
   get username()
@@ -39,7 +39,7 @@ export class RegistrationComponent implements OnInit {
    return this.registrationForm.get('password')
   }
   submit(){
-    this.http.post<any>("http://192.168.1.140:3000/students",this.registrationForm.value).subscribe((result)=>{
+    this.http.post<any>("http://192.168.1.116:3000/register",this.registrationForm.value).subscribe((result)=>{
       alert("Registration Successfull !!!");
       this.registrationForm.reset();
       this.router.navigate(['login'])

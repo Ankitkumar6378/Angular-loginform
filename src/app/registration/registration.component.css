@@ -23,6 +23,7 @@ body{
         height: 30px;
         font-size:13px;
         font-weight: bold;
+        cursor: pointer;
     }
      
     button:hover{

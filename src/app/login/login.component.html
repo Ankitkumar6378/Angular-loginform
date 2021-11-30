@@ -23,11 +23,12 @@
                 <span style="color: red;" *ngIf="password && password.invalid && password.touched">Enter valid password</span>
                 <br>
     
-                <button id="btn"  value="Submit">Login</button>
+                <button id="btn" [disabled]="loginForm.invalid" value="Submit">Login</button>
                 
                 <p>
                         Not a member ?
-                        <a routerLink="/registration"> Go and register. </a>
+                        <a routerLink="/registration"> Go and register. </a><br>
+                        <a routerLink="/forget">Forget your Password?</a>
                 </p>
                 
             </form>

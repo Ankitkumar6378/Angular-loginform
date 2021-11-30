@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 const routes: Routes = [
   {path:'login' , component:LoginComponent},
   {path:'registration',component:RegistrationComponent},
+  {path:'forget',component:ForgetPasswordComponent},
   {path:'home',component:HomeComponent},
 
   {path:'**',redirectTo:'login'}

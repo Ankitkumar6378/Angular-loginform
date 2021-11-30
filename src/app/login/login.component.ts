@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -29,7 +30,7 @@ export class LoginComponent implements OnInit {
    return this.loginForm.get('password')
   }
   login(){
-    this.http.get<any>("http://192.168.1.140:3000/students").subscribe((result)=>{
+    this.http.get<any>("http://192.168.1.116:3000/register").subscribe((result)=>{
       const user=result.find((a:any)=>
       {
         return a.email===this.loginForm.value.email && a.password===this.loginForm.value.password
